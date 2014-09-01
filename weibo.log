@@ -1,0 +1,16 @@
+0    INFO  [2014-08-21 17:39:13]  code: 
+56   DEBUG [2014-08-21 17:39:13]  Request:
+56   DEBUG [2014-08-21 17:39:13]  POSThttps://api.weibo.com/oauth2/access_token
+1871 DEBUG [2014-08-21 17:39:15]  Response:
+1871 DEBUG [2014-08-21 17:39:15]  https StatusCode:400
+1872 DEBUG [2014-08-21 17:39:15]  Server:nginx/1.2.0
+1872 DEBUG [2014-08-21 17:39:15]  Date:Thu, 21 Aug 2014 09:38:37 GMT
+1872 DEBUG [2014-08-21 17:39:15]  Transfer-Encoding:chunked
+1872 DEBUG [2014-08-21 17:39:15]  Connection:keep-alive
+1872 DEBUG [2014-08-21 17:39:15]  Pragma:No-cache
+1872 DEBUG [2014-08-21 17:39:15]  Cache-Control:no-cache
+1872 DEBUG [2014-08-21 17:39:15]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+1872 DEBUG [2014-08-21 17:39:15]  Api-Server-IP:10.75.2.82
+1899 WARN  [2014-08-21 17:39:15]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+1899 DEBUG [2014-08-21 17:39:15]  {"error":"redirect_uri_mismatch","error_code":21322,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token"}
+
