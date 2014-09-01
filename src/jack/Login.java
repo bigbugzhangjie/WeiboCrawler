@@ -19,6 +19,10 @@ public class Login {
 		this.uid = uid;
 		this.pwd = pwd;
 	}
+	public Login(Account account){
+		uid = account.getUid();
+		pwd = account.getPasswd();
+	}
 	public Login(String uid,String pwd,ClientInfo client){
 		this.uid = uid;
 		this.pwd = pwd;
@@ -26,12 +30,6 @@ public class Login {
 	}
 	public void setClient(ClientInfo client){
 		this.client = client;
-	}
-
-	public static void main(String[] args) {
-		Account account = Accounts.list.get("bigbugzhang@sina.com");
-		Login login = new Login(account.getUid(),"");
-		login.login();
 	}
 	
 	public void login(){
@@ -95,5 +93,10 @@ public class Login {
 	}
 	
 
+	public static void main(String[] args) {
+		Account account = Accounts.list.get("bigbug04@sina.com");
+		Login login = new Login(account.getUid(),"111111");
+		login.login();
+	}
 
 }
