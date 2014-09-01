@@ -8,8 +8,8 @@ import weibo4j.model.WeiboException;
 public class ShowUser {
 
 	public static void main(String[] args) {
-		String access_token = args[0];
-		String uid = args[1];
+		String access_token = "2.00lIaqwBbrB3ICb8c7570b00W4UQ2B";//args[0];
+		String uid = "1771998764";//"1785692303";//args[1];
 		Users um = new Users(access_token);
 		try {
 			User user = um.showUserById(uid);
