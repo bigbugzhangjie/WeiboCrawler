@@ -1,4 +1,4 @@
-package jack;
+package jack.weibo;
 
 import java.util.HashMap;
 

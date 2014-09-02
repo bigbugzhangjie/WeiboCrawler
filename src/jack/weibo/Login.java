@@ -1,4 +1,4 @@
-package jack;
+package jack.weibo;
 
 import java.io.IOException;
 
@@ -95,7 +95,7 @@ public class Login {
 
 	public static void main(String[] args) {
 		Account account = Accounts.list.get("bigbug04@sina.com");
-		Login login = new Login(account.getUid(),"111111");
+		Login login = new Login(account.getUid(),"654123");
 		login.login();
 	}
 

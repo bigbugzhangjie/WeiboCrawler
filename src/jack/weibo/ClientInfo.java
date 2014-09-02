@@ -1,4 +1,4 @@
-package jack;
+package jack.weibo;
 
 public class ClientInfo {
 	public static final ClientInfo CLIENT= new ClientInfo("1955726735","0a5232ffbfcd7d6eab4ee73b965dfbc1","http://127.0.0.1:8080");

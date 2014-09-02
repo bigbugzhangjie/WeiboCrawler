@@ -1,8 +1,8 @@
 package jack.Helper;
 
 import weibo4j.Friendships;
-import jack.Account;
-import jack.Accounts;
+import jack.weibo.Account;
+import jack.weibo.Accounts;
 
 public class FriendshipHelper {
 	

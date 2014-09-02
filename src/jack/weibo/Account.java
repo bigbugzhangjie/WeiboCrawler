@@ -1,4 +1,4 @@
-package jack;
+package jack.weibo;
 
 public class Account{
 	String uid = "";
