@@ -184,7 +184,6 @@ public class HttpClient implements java.io.Serializable {
 	public Response get(String url, PostParameter[] params, String token)
 			throws WeiboException {
 		log("Request:");
-		log("GET:" + url);
 		if (null != params && params.length > 0) {
 			String encodedParams = HttpClient.encodeParameters(params);
 			if (-1 == url.indexOf("?")) {
@@ -193,6 +192,7 @@ public class HttpClient implements java.io.Serializable {
 				url += "&" + encodedParams;
 			}
 		}
+		log("GET:" + url);
 		GetMethod getmethod = new GetMethod(url);
 		return httpRequest(getmethod, token);
 

@@ -292,9 +292,12 @@ public class Friendships extends Weibo {
 	 * @since JDK 1.5
 	 */
 	public String[] getFriendsIdsByUid(String uid) throws WeiboException {
-		return User.constructIds(client.get(WeiboConfig.getValue("baseURL")
-				+ "friendships/friends/ids.json",
-				new PostParameter[] { new PostParameter("uid", uid) },
+		return User.constructIds(
+			client.get(
+				WeiboConfig.getValue("baseURL")	+ "friendships/friends/ids.json",
+				new PostParameter[] { 
+					new PostParameter("uid", uid), 
+					new PostParameter("count", 5000)},
 				access_token));
 	}
 

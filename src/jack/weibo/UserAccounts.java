@@ -16,6 +16,7 @@ static {
 		usermap.put("bigbug002@sina.com", new UserAccount("bigbug002@sina.com","2.008rcIkFbrB3IC17539ef8360hjigr","5262431625"));
 		usermap.put("bigbug03@sina.com", new UserAccount("bigbug03@sina.com","2.00PpUJkFbrB3IC096b11ed7dzlaD6B","5262639065"));
 		usermap.put("bigbug04@sina.com", new UserAccount("bigbug04@sina.com","2.00sCVJkFbrB3IC950126aa040rqYjB","5262639910"));
+		usermap.put("bigbug05@sina.com", new UserAccount("bigbug05@sina.com","2.00KMB9lFfnvx7E7574c40c68udAcvD","5281829734"));
 	}
 }
 

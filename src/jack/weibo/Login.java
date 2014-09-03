@@ -50,7 +50,12 @@ public class Login {
 				new NameValuePair("ticket", ""),
 				new NameValuePair("isLoginSina", ""),
 				new NameValuePair("response_type", "code"),
-				new NameValuePair("regCallback", "http://172.16.106.187/oauth2/authorize?client_id=2672156159&response_type=code&display=default&redirect_uri=http://127.0.0.1/&from=&with_cookie="),
+				new NameValuePair("regCallback", 
+						"http://api.weibo.com/oauth2/authorize?"
+						+ "client_id="+client.getId()
+						+ "&response_type=code&display=default&"
+						+ "redirect_uri="+client.getRedirectURI()
+						+ "&from=&with_cookie="),
 				new NameValuePair("redirect_uri", redirect_uri),
 				new NameValuePair("client_id", appID),
 				new NameValuePair("state", ""),
@@ -90,11 +95,10 @@ public class Login {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			}
-	}
-	
+	}	
 
 	public static void main(String[] args) {
-		UserAccount account = UserAccounts.usermap.get("bigbug04@sina.com");
+		UserAccount account = UserAccounts.usermap.get("bigbug05@sina.com");
 		Login login = new Login(account.getUid(),"654123");
 		login.login();
 	}
