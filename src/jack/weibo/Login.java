@@ -19,7 +19,7 @@ public class Login {
 		this.uid = uid;
 		this.pwd = pwd;
 	}
-	public Login(Account account){
+	public Login(UserAccount account){
 		uid = account.getUid();
 		pwd = account.getPasswd();
 	}
@@ -94,7 +94,7 @@ public class Login {
 	
 
 	public static void main(String[] args) {
-		Account account = Accounts.list.get("bigbug04@sina.com");
+		UserAccount account = UserAccounts.usermap.get("bigbug04@sina.com");
 		Login login = new Login(account.getUid(),"654123");
 		login.login();
 	}

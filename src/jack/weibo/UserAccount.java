@@ -1,18 +1,18 @@
 package jack.weibo;
 
-public class Account{
+public class UserAccount{
 	String uid = "";
 	String email;
 	String token;
 	String passwd="";
 	
-	public Account(){}
+	public UserAccount(){}
 	
-	public Account(String email,String token){
+	public UserAccount(String email,String token){
 		this.email = email;
 		this.token = token;
 	}
-	public Account(String email,String token,String id){
+	public UserAccount(String email,String token,String id){
 		this.email = email;
 		this.token = token;
 		this.uid = id;

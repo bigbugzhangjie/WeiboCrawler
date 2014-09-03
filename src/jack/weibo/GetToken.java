@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;  
 import java.util.List;  
 
-public class AutoGetToken {
+public class GetToken {
 	/***  
      * 模拟登录并得到登录后的Token  
      * @param username  用户名  
@@ -24,7 +24,7 @@ public class AutoGetToken {
      * @throws HttpException  
      * @throws IOException  
      */  
-    public static  AccessToken getToken(String username,String password) throws HttpException, IOException{
+    public static  AccessToken get(String username,String password) throws HttpException, IOException{
 		String clientId = WeiboConfig.getValue("client_ID") ;  
 	    String redirectURI = WeiboConfig.getValue("redirect_URI") ;  
 	    String url = WeiboConfig.getValue("authorizeURL");  
@@ -112,7 +112,7 @@ public class AutoGetToken {
 	
 	public static void main(String[] args) throws Exception  
 	{  
-	  AccessToken at = getToken("bigbug04@sina.com","654123");  
+	  AccessToken at = get("bigbug001@sina.com","654123");  
 	  System.out.println(at.getAccessToken());
 	  
 //	  sinaSendWeibo(at.getAccessToken(),"测试呢");  
