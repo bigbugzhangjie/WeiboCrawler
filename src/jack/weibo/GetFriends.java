@@ -19,24 +19,29 @@ public class GetFriends extends Friendships {
 	}
 
 	public static void main(String[] args) throws Exception {
+		
 		String token = "2.00KMB9lFOgQUTD3988dc579908k9d7";
 		String screenName = "bigbug05";
 		GetFriends fm = new GetFriends(token);
+		List<User> list = fm.getAllFriends(screenName);
 		
+		for (User u : list) {
+			System.out.println(u.getId());
+		}
+		System.out.println("Found "+ list.size()+" friends.");
+	}
+	
+	public List<User> getAllFriends(String screenName) throws WeiboException{
 		long curs = 0;
 		long total = 1;
 		List<User> list = new ArrayList<User>() ;
 		while( list.size()<total){
-			UserWapper users = fm.getFriends(screenName,curs);
+			UserWapper users = getFriends(screenName,curs);
 			list.addAll(users.getUsers());
 			total = users.getTotalNumber();
 			curs += users.getUsers().size();			
 		}
-		
-		System.out.println(total+"\t"+curs);
-		for (User u : list) {
-			System.out.println(u.getId());
-		}
+		return list;
 	}
 
 	public UserWapper getFriends(String screen_name,long cursor)
