@@ -1,4 +1,4 @@
-package jack.weibo;
+package jack.weibo.crawler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,10 @@ import weibo4j.model.UserWapper;
 import weibo4j.model.WeiboException;
 import weibo4j.util.WeiboConfig;
 
-public class GetFriends extends Friendships {
-	String token;
+public class GetFriends extends MyWeibo {
 
 	public GetFriends(String token) {
 		super(token);
-		this.token = token;
 	}
 
 	public static void main(String[] args) throws Exception {
@@ -41,6 +39,7 @@ public class GetFriends extends Friendships {
 			total = users.getTotalNumber();
 			curs += users.getUsers().size();			
 		}
+		
 		return list;
 	}
 
@@ -51,7 +50,7 @@ public class GetFriends extends Friendships {
 				new PostParameter[] { 
 					new PostParameter("screen_name",screen_name),
 					new PostParameter("cursor",cursor)}, 
-				token));
+				getToken()));
 		return ret;
 	}
 

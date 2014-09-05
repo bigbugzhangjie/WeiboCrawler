@@ -11,8 +11,8 @@ public class GetFriendsById {
 //		String access_token = args[0];
 //		String id = args[1];
 		
-		String access_token = "2.00lIaqwBbrB3ICb8c7570b00W4UQ2B";//args[0];
-		String id = "1771998764";//"1771998764";//"1785692303";//args[1];
+		String access_token = "2.00KMB9lFOgQUTD3988dc579908k9d7";//args[0];
+		String id = "5281829734";//"1771998764";//"1785692303";//args[1];
 		
 		
 		Friendships fm = new Friendships(access_token);
