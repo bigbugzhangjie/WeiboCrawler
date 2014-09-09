@@ -123,22 +123,9 @@ public class GetToken {
 		return flag;
 	}
 
-	public static void main(String[] args) throws Exception {
-//		File f = new File("E:/workspace/WeiboCrawler/doc/accounts.txt");
-//		getFromFile(f);
-	
-		getOne();
-	}
-	
-	public static void getOne() throws HttpException, IOException{
-		 AccessToken at = get("z127513@huawei.com", "q1w2e3");
-		 System.out.println(at.getAccessToken());
-
-		// sinaSendWeibo(at.getAccessToken(),"测试呢");
-	}
 	
 	public static void getFromFile(File f) throws Exception{		
-		List<String> lines = FileTools.getLines(f);
+		List<String> lines = FileTools.getLineList(f);
 		List<String> ret = new ArrayList<String>();
 		for (String line : lines) {
 			String[] col = line.split("\t");
@@ -164,4 +151,17 @@ public class GetToken {
 
 	}
 
+	public static void main(String[] args) throws Exception {
+//		File f = new File("E:/workspace/WeiboCrawler/doc/accounts.txt");
+//		getFromFile(f);
+	
+		getOne();
+	}
+
+	public static void getOne() throws HttpException, IOException{
+		 AccessToken at = get("bigbug05@sina.com", "654123");
+		 System.out.println(at.getAccessToken());
+
+		// sinaSendWeibo(at.getAccessToken(),"测试呢");
+	}
 }

@@ -1,11 +1,6 @@
-z127513@huawei.com
-bigbugzhang@gmail.com
-bigbugzhang@126.com
-zhangjie001@huawei.com
-zhangjie@tju.edu.cn
-zhangjie03-ghq@sinosig.com	
-bigbugzhang@sina.com
-bigbug001@sina.com
-bigbug002@sina.com
-bigbug03@sina.com
-bigbug04@sina.com
+bigbugzhang@sina.com	654123	2.008SZyPBOgQUTDc8c0b53eadC2rhdE
+bigbug001@sina.com	654123	2.00FhcIkFOgQUTDf4d2e1b33cQIy_NB
+bigbug002@sina.com	654123	2.008rcIkFOgQUTDb5abf115a4QRP7WE
+bigbug03@sina.com	654123	2.00PpUJkFOgQUTDd35de172a4_s6lxD
+bigbug04@sina.com	654123	2.00sCVJkFOgQUTD9bec13fb77L5gzoB
+bigbug05@sina.com	654123	5281829734	2.00KMB9lFOgQUTD3988dc579908k9d7

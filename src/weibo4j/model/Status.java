@@ -37,6 +37,8 @@ public class Status extends WeiboResponse {
 	private String annotations;                          //元数据，没有时不返回此字段
 	private int mlevel;
 	private Visible visible;
+	private JSONObject json;
+	
 	public Status()
 	{
 
@@ -44,6 +46,16 @@ public class Status extends WeiboResponse {
 	public Status(Response res)throws WeiboException{
 		super(res);
 		JSONObject json=res.asJSONObject();
+		constructJson(json);
+	}
+	
+	public Status(JSONObject json)throws WeiboException, JSONException{
+		constructJson(json);
+	}
+	public Status(String str) throws WeiboException, JSONException {
+		// StatusStream uses this constructor
+		super();
+		JSONObject json = new JSONObject(str);
 		constructJson(json);
 	}
 
@@ -81,6 +93,7 @@ public class Status extends WeiboResponse {
 			if(!json.isNull("visible")){
 				visible= new Visible(json.getJSONObject("visible"));
 			}
+			this.json = json;
 		} catch (JSONException je) {
 			throw new WeiboException(je.getMessage() + ":" + json.toString(), je);
 		}
@@ -101,18 +114,6 @@ public class Status extends WeiboResponse {
 		}
 		longitude=Double.parseDouble(value.toString());
 	}
-
-
-	public Status(JSONObject json)throws WeiboException, JSONException{
-		constructJson(json);
-	}
-	public Status(String str) throws WeiboException, JSONException {
-		// StatusStream uses this constructor
-		super();
-		JSONObject json = new JSONObject(str);
-		constructJson(json);
-	}
-
 	
 	public User getUser() {
 		return user;
@@ -324,4 +325,7 @@ public class Status extends WeiboResponse {
 				+ ", visible=" + visible + "]";
 	}
 
+	public JSONObject getJSONObject(){
+		return this.json;
+	}
 }
