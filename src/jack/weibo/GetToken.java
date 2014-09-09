@@ -159,7 +159,7 @@ public class GetToken {
 	}
 
 	public static void getOne() throws HttpException, IOException{
-		 AccessToken at = get("bigbug05@sina.com", "654123");
+		 AccessToken at = get("bigbug04@sina.com", "654123");
 		 System.out.println(at.getAccessToken());
 
 		// sinaSendWeibo(at.getAccessToken(),"测试呢");

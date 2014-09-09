@@ -18,8 +18,10 @@ public class GetFriends extends MyWeibo {
 
 	public static void main(String[] args) throws Exception {
 		
-		String token = "2.00KMB9lFOgQUTD3988dc579908k9d7";
-		String screenName = "bigbug05";
+		// 2.00sCVJkFOgQUTDa0282ecab5075hvP		bigbug05
+		// 2.00KMB9lFOgQUTD3988dc579908k9d7		bigbug05
+		String token = "2.00sCVJkFOgQUTDa0282ecab5075hvP";
+		String screenName = "bigbug04";
 		GetFriends fm = new GetFriends(token);
 		List<User> list = fm.getAllFriends(screenName);
 		
@@ -38,7 +40,7 @@ public class GetFriends extends MyWeibo {
 			list.addAll(users.getUsers());
 			total = users.getTotalNumber();
 			curs += users.getUsers().size();	
-			Thread.sleep(30000);  // if not sleep here, user token will be out of rate limit.
+			Thread.sleep(20000);  // if not sleep here, user token will be out of rate limit.
 		}
 		
 		return list;
