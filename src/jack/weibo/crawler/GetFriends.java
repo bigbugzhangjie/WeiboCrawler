@@ -29,7 +29,7 @@ public class GetFriends extends MyWeibo {
 		System.out.println("Found "+ list.size()+" friends.");
 	}
 	
-	public List<User> getAllFriends(String screenName) throws WeiboException{
+	public List<User> getAllFriends(String screenName) throws WeiboException, InterruptedException{
 		long curs = 0;
 		long total = 1;
 		List<User> list = new ArrayList<User>() ;
@@ -37,7 +37,8 @@ public class GetFriends extends MyWeibo {
 			UserWapper users = getFriends(screenName,curs);
 			list.addAll(users.getUsers());
 			total = users.getTotalNumber();
-			curs += users.getUsers().size();			
+			curs += users.getUsers().size();	
+			Thread.sleep(30000);  // if not sleep here, user token will be out of rate limit.
 		}
 		
 		return list;

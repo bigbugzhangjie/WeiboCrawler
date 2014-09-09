@@ -16,6 +16,8 @@ import weibo4j.util.ArrayUtils;
 import weibo4j.util.WeiboConfig;
 
 public class GetTimeline extends MyWeibo {
+	public static long SLEEP_BASIC = 120000; //每轮至少sleep 60秒
+	public static long SLEEP_DELTA = 3000; // 每发行一条重复status，多sleep 3秒
 
 	public GetTimeline(String token) {
 		super(token);
@@ -85,7 +87,7 @@ public class GetTimeline extends MyWeibo {
 			 }
 			 w.flush();
 			 prev = curr;
-			 sleep = 10000 + dupNum*3000; // 休息10秒，每重复1条多休息3秒；
+			 sleep = SLEEP_BASIC + dupNum*SLEEP_DELTA; // 休息10秒，每重复1条多休息3秒；
 			 System.out.println("Found "+dupNum +" duplicated status this round. ");
 			 System.out.println("Sleep "+(int)(sleep/1000) +" seconds.");
 			 try {
